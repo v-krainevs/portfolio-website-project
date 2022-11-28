@@ -1,0 +1,27 @@
+/* GLOBAL STYLING */
+html * {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.125rem;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  color: black;
+  transition: 75ms;
+}
+a:hover {
+  color: aqua;
+}
+
+/* INDIVIDUAL ELEMENTS STYLING */
+/* HEADER */
+header {
+  height: 4em;
+  margin: 0 0.75em;
+}
+
+/* MAIN */
+/* About section */

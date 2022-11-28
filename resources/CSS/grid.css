@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap");
+body {
+  display: grid;
+}
+
+/* HEADER */
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: space-between;
+  align-items: center;
+}
+#logo {
+  justify-self: start;
+}
+nav {
+  justify-self: end;
+}
+nav > a {
+  margin-left: 2em;
+}
+
+/* MAIN */
+main {
+  max-width: 1000px;
+  justify-self: center;
+}
+/* About me */
+.abt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  justify-items: center;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+.abt_div {
+  max-width: 300px;
+}
+.anonymous_img_div {
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 3em 3em 9em 9em;
+}
+.abt img {
+  max-height: 100%;
+}
+
+/* Projects section */
+.projects_grid {
+  display: grid;
+  grid-template: repeat(2, 300px) / repeat(2, 1fr);
+}
+.project_div {
+  padding-right: 1em;
+}
+
+.project_div img {
+  max-width: 100%;
+}

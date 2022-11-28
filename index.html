@@ -5,67 +5,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="resources/reset.css">
-    <link rel="stylesheet" href="/resources/style.css">
+    <title>Vladislav Krainev Portfolio</title>
+    <link rel="stylesheet" href="resources/CSS/reset.css">
+    <link rel="stylesheet" href="resources/CSS/style.css">
+    <link rel="stylesheet" href="resources/CSS/grid.css">
+
 </head>
 
 <body>
     <header>
+        <h2 id="logo">Krainev</h2>
         <nav>
-            <h1>Krainev</h1>
-            <div>
-                <a href="#">About Me</a>
-                <a href="#">Projects</a>
-                <a href="#">Skills</a>
-                <a href="#">Contact</a>
-            </div>
+            <a href="#">About Me</a>
+            <a href="#">Projects</a>
+            <a href="#">Skills</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
     <main>
         <!-- About me section -->
-        <section>
-            <h1>About me</h1>
-            <p>Hi, my name is Vlad. I am a web developer from Riga, Latvia. If you're reading this text, that means
-                you've came across my first personal Portfolio website. Siu.</p>
+        <section class="abt">
+            <div class="bio ">
+                <h2>About me</h2>
+                <p>Hi, my name is Vlad. I am a web developer from Riga, Latvia. If you're reading this, it
+                    means
+                    you've came across my first personal Portfolio website. Siu.</p>
+            </div>
+
+            <div class="anonymous_img_div abt_div">
+                <img id="anonymous_img" src="resources/Images/anonymous.png" alt="Anonymous Hacker">
+            </div>
         </section>
         <!-- Projects section -->
         <section>
-            <h1>Projects</h1>
-            <ul>
-                <li>Cheatsheet</li>
-                <!-- <img src="resources/Images/CheatsheetScr.png" alt="Screenshot of Cheatsheet"> -->
-                <p>One of my very first, very simplest projects, built only with HTML and CSS. Even though it's super
-                    easy and there is no JS it is still dear to my heart as a beggining of my journey on becoming a
-                    Web Developer...</p>
-                <li>Mysterious-Organism</li>
-                <!-- <img src="" alt=""> -->
-                <p>A project done on CodeCademy which cost me a lot of energy and brain cells. Done completely with JS
-                    so feel free to view the source code on <a
-                        href="https://github.com/v-krainevs/Challenge-Project-Mysterious-Organism">my GitHub page</a>
-                </p>
-                <li>A Card Validator</li>
-                <!-- <img src="" alt=""> -->
-                <p>A project which I liked so much that I've decided to implemented right in my Portfolio. Feel free to
-                    enter your 16 card digits to verify if the card issued by your bank is valid! I am not a thief.
-                    Trust me! :)
-                </p>
-                <li>Fotomatic Responsive Web Design Project</li>
-                <!-- <img src="" alt=""> -->
-                <p>Here I practiced my knowledge in Responsive Design by using media queries. Scroll through pictures to
-                    see how the website looked on different devices before and after applying Responsive Web Deisgn to
-                    it.</p>
-            </ul>
+            <h2>Projects</h2>
+            <div class="projects_grid">
+                <div class="cheatsheet project_div">
+                    <img src="resources\Images\Cheatsheet\CheatsheetScr.png" alt="Screenshot of Cheatsheet">
+                    <h3>Cheatsheet</h3>
+                    <p>One of my very first, very simplest projects, built only with HTML and CSS. Even though it's
+                        super
+                        easy and there is no JS it is still dear to my heart as a beggining of my journey on becoming a
+                        Web Developer...</p>
+                </div>
+                <div class="mysterious_organism project_div">
+                    <!-- <img src="" alt=""> -->
+                    <h3>Mysterious-Organism</h3>
+                    <p>A project done on CodeCademy which cost me a lot of energy and brain cells. Done completely with
+                        JS
+                        so check out the source code on <a
+                            href="https://github.com/v-krainevs/Challenge-Project-Mysterious-Organism">my GitHub
+                            page</a>
+                    </p>
+                </div>
+                <div class="card_validator project_div">
+                    <!-- <img src="" alt=""> -->
+                    <h3>A Card Validator</h3>
+                    <p>A project which I liked so much that I've decided to implemented right in my Portfolio. Feel free
+                        to
+                        enter your 16 card digits to verify if the card issued by your bank is valid! I am not a thief.
+                        Trust me! :)
+                    </p>
+                </div>
+                <div class="fotomatic project_div">
+                    <!-- <img src="" alt=""> -->
+                    <h3>Fotomatic Responsive Web Design Project</h3>
+                    <p>Here I practiced my knowledge in Responsive Design by using media queries. Scroll through
+                        pictures to
+                        see how the website looked on different devices before and after applying Responsive Web Deisgn
+                        to
+                        it.</p>
+                </div>
+            </div>
         </section>
         <!-- Skills section -->
         <section>
-            <h1>Skills</h1>
+            <h2>Skills</h2>
             <img src="" alt="">
             <img src="" alt="">
             <img src="" alt="">
         </section>
     </main>
     <footer></footer>
+
 </body>
 
 </html>
