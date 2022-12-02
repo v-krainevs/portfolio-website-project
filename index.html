@@ -24,63 +24,103 @@
     </header>
     <main>
         <!-- About me section -->
-        <section class="abt">
-            <div class="bio ">
-                <h2>About me</h2>
-                <p>Hi, my name is Vlad. I am a web developer from Riga, Latvia. If you're reading this, it
-                    means
-                    you've came across my first personal Portfolio website. Siu.</p>
-            </div>
-
-            <div class="anonymous_img_div abt_div">
+        <section class="abt section">
+            <h2 class="heading">About me</h2>
+            <div class="crop">
                 <img id="anonymous_img" src="resources/Images/anonymous.png" alt="Anonymous Hacker">
             </div>
+            <p class="description">Hi, my name is Vlad. I am a web developer from Riga, Latvia. If you're reading this,
+                it
+                means
+                you've came across my first personal Portfolio website. Siu.</pс>
+
         </section>
         <!-- Projects section -->
-        <section>
-            <h2>Projects</h2>
-            <div class="projects_grid">
-                <div class="cheatsheet project_div">
-                    <img src="resources\Images\Cheatsheet\CheatsheetScr.png" alt="Screenshot of Cheatsheet">
-                    <h3>Cheatsheet</h3>
-                    <p>One of my very first, very simplest projects, built only with HTML and CSS. Even though it's
-                        super
-                        easy and there is no JS it is still dear to my heart as a beggining of my journey on becoming a
-                        Web Developer...</p>
+        <section class="projects_section section">
+            <h2 class="heading">Projects</h2>
+            <div class="projects_interactive_panel">
+                <div class="arrow_left arrow"></div>
+                <div class="hide_projects_grid">
+                    <div class="projects_grid">
+                        <div class="project_card">
+                            <div class="crop_project_thumbnail"><img class="project_thumbnail"
+                                    src="resources\Images\Cheatsheet\cheatsheet_thumbnail.jpeg"
+                                    alt="Screenshot of Cheatsheet">
+                            </div>
+                            <div class="description">
+                                <h3>Cheatsheet</h3>
+                                <p>One of my very first, very simplest projects, built only with HTML and CSS. Even
+                                    though
+                                    it's
+                                    super
+                                    easy and there is no JS it is still dear to my heart as a beggining of my journey on
+                                    becoming a
+                                    Web Developer...</p>
+                            </div>
+                        </div>
+                        <div class="project_card">
+                            <div class="crop_project_thumbnail"><img class="project_thumbnail"
+                                    src="resources\Images\Mysterious_Organism\Mysterious-Organism-Thumbnail.jpg"
+                                    alt="Mysterious Fish">
+                            </div>
+                            <div class="description">
+                                <h3>Mysterious-Organism</h3>
+                                <p>A project done on CodeCademy which cost me a lot of energy and brain cells. Done
+                                    completely
+                                    with
+                                    JS
+                                    so check out the source code on <a
+                                        href="https://github.com/v-krainevs/Challenge-Project-Mysterious-Organism">my
+                                        GitHub
+                                        page</a>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="project_card">
+                            <div class="crop_project_thumbnail">
+                                <img src="resources/Images/Card_Validator/card_validator.jpg" alt="Card Validator">
+                            </div>
+                            <div class="description">
+                                <h3>A Card Validator</h3>
+                                <p>A project which I liked so much that I've decided to implemented right in my
+                                    Portfolio.
+                                    Feel
+                                    free
+                                    to
+                                    enter your 16 card digits to verify if the card issued by your bank is valid! I am
+                                    not a
+                                    thief.
+                                    Trust me! :)
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="project_card">
+                            <div class="crop_project_thumbnail">
+                                <img src="resources/Images/Fotomatic/responsive_web_design.png" alt="">
+                            </div>
+                            <div class="description">
+                                <h3>Fotomatic Responsive Web Design Project</h3>
+                                <p>Here I practiced my knowledge in Responsive Design by using media queries. Scroll
+                                    through
+                                    pictures to
+                                    see how the website looked on different devices before and after applying Responsive
+                                    Web
+                                    Deisgn
+                                    to
+                                    it.</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="mysterious_organism project_div">
-                    <!-- <img src="" alt=""> -->
-                    <h3>Mysterious-Organism</h3>
-                    <p>A project done on CodeCademy which cost me a lot of energy and brain cells. Done completely with
-                        JS
-                        so check out the source code on <a
-                            href="https://github.com/v-krainevs/Challenge-Project-Mysterious-Organism">my GitHub
-                            page</a>
-                    </p>
-                </div>
-                <div class="card_validator project_div">
-                    <!-- <img src="" alt=""> -->
-                    <h3>A Card Validator</h3>
-                    <p>A project which I liked so much that I've decided to implemented right in my Portfolio. Feel free
-                        to
-                        enter your 16 card digits to verify if the card issued by your bank is valid! I am not a thief.
-                        Trust me! :)
-                    </p>
-                </div>
-                <div class="fotomatic project_div">
-                    <!-- <img src="" alt=""> -->
-                    <h3>Fotomatic Responsive Web Design Project</h3>
-                    <p>Here I practiced my knowledge in Responsive Design by using media queries. Scroll through
-                        pictures to
-                        see how the website looked on different devices before and after applying Responsive Web Deisgn
-                        to
-                        it.</p>
-                </div>
+                <div class="arrow_right arrow"></div>
             </div>
         </section>
         <!-- Skills section -->
-        <section>
-            <h2>Skills</h2>
+        <section class="section">
+            <h2 class="heading">Skills</h2>
             <img src="" alt="">
             <img src="" alt="">
             <img src="" alt="">

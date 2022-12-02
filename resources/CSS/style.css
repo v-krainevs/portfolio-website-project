@@ -2,6 +2,10 @@
 html * {
   font-family: "Nunito", sans-serif;
   font-size: 1.125rem;
+  box-sizing: border-box;
+}
+body {
+  background-color: aliceblue;
 }
 h2 {
   font-size: 2rem;
@@ -20,7 +24,10 @@ a:hover {
 /* HEADER */
 header {
   height: 4em;
-  margin: 0 0.75em;
+  padding: 0 0.75em;
+  background-color: aliceblue;
+  border-bottom: 0.5px solid;
+  border-color: rgb(0, 0, 0);
 }
 
 /* MAIN */

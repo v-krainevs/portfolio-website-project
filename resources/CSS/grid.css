@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap");
+
 body {
   display: grid;
 }
-
+section {
+  margin: 2em 0;
+}
+h3 {
+  font-size: 1.125em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
 /* HEADER */
 header {
   display: grid;
@@ -25,38 +33,86 @@ main {
   max-width: 1000px;
   justify-self: center;
 }
-/* About me */
+/* About me SECTION*/
 .abt {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "heading heading"
+    "image description";
   justify-content: space-around;
   justify-items: center;
   overflow: hidden;
-  margin-bottom: 2em;
 }
-.abt_div {
-  max-width: 300px;
+.heading {
+  grid-area: heading;
+  justify-self: start;
+  margin-bottom: 1em;
 }
-.anonymous_img_div {
+
+.crop {
   height: 300px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   border-radius: 3em 3em 9em 9em;
+  max-width: 300px;
 }
-.abt img {
+
+#anonymous_img {
   max-height: 100%;
 }
 
-/* Projects section */
+/* Projects SECTION */
+.projects_interactive_panel {
+  display: grid;
+  grid-template-columns: 40px 1000px 40px;
+  align-items: center;
+}
+.hide_projects_grid {
+  overflow: hidden;
+  width: 1000px;
+}
 .projects_grid {
   display: grid;
-  grid-template: repeat(2, 300px) / repeat(2, 1fr);
+  grid-template: 1fr / repeat(4, 100%);
 }
-.project_div {
-  padding-right: 1em;
+.arrow {
+  color: rebeccapurple;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  box-sizing: border-box;
+  position: absolute;
 }
-
-.project_div img {
-  max-width: 100%;
+.arrow_left {
+  border-right: 40px solid red;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
 }
+.arrow_right {
+  border-left: 40px solid red;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+}
+.project_card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  height: 300px;
+}
+.description {
+  padding: 2em;
+}
+.crop_project_thumbnail {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 2em;
+  height: 300px;
+  width: 450px;
+}
+.project_thumbnail {
+  height: 100%;
+}
+/* Cheatsheet Project */
