@@ -32,3 +32,16 @@ header {
 
 /* MAIN */
 /* About section */
+
+/* Projects section */
+.arrow {
+  transition: 150ms;
+}
+#left_arrow {
+  opacity: 0.2;
+}
+.sausage {
+  transition: 400ms;
+  position: relative;
+  right: 0px;
+}
