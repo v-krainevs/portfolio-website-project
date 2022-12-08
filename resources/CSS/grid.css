@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap");
 
-body {
-  display: grid;
-}
 section {
   margin: 2em 0;
 }
@@ -30,8 +27,9 @@ nav > a {
 
 /* MAIN */
 main {
-  max-width: 1000px;
   justify-self: center;
+  display: grid;
+  justify-items: center;
 }
 /* About me SECTION*/
 .abt {
@@ -40,27 +38,20 @@ main {
   grid-template-areas:
     "heading heading"
     "image description";
-  justify-content: space-around;
   justify-items: center;
   overflow: hidden;
 }
 .heading {
   grid-area: heading;
-  justify-self: start;
   margin-bottom: 1em;
 }
 
 .crop {
-  height: 300px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   border-radius: 3em 3em 9em 9em;
   max-width: 300px;
-}
-
-#anonymous_img {
-  max-height: 100%;
 }
 
 /* Projects SECTION */
@@ -72,36 +63,31 @@ main {
 }
 .hide_sausage {
   overflow: hidden;
-  width: 1000px;
 }
 .sausage {
   display: grid;
   grid-template: 1fr / repeat(4, 100%);
 }
 .arrow {
-  color: rebeccapurple;
   display: inline-block;
   width: 0px;
   height: 0px;
   box-sizing: border-box;
   cursor: pointer;
   z-index: 5;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
 }
 .arrow_left {
-  border-right: 40px solid red;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
+  border-right: 40px solid black;
 }
 .arrow_right {
-  border-left: 40px solid red;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
+  border-left: 40px solid black;
 }
 .project_card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  height: 300px;
 }
 .description {
   padding: 2em;
@@ -111,8 +97,8 @@ main {
   justify-content: center;
   overflow: hidden;
   border-radius: 2em;
-  height: 300px;
-  width: 450px;
+  max-height: 300px;
+  max-width: 450px;
 }
 .project_thumbnail {
   height: 100%;
