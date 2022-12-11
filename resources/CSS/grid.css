@@ -20,6 +20,8 @@ header {
 }
 nav {
   justify-self: end;
+  display: flex;
+  justify-content: space-around;
 }
 nav > a {
   margin-left: 2em;
@@ -27,31 +29,32 @@ nav > a {
 
 /* MAIN */
 main {
-  justify-self: center;
   display: grid;
   justify-items: center;
+  justify-content: center;
 }
 /* About me SECTION*/
 .abt {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "heading heading"
-    "image description";
+  grid-template-columns: repeat(2, minmax(250px, 400px));
+  max-width: 90vw;
+  min-width: min-content;
+  gap: 1em;
   justify-items: center;
-  overflow: hidden;
+  align-content: center;
 }
 .heading {
-  grid-area: heading;
-  margin-bottom: 1em;
+  grid-column: span 2;
 }
 
 .crop {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  border-radius: 3em 3em 9em 9em;
-  max-width: 300px;
+  justify-self: end;
+  max-width: 100%;
+  border-radius: 2em;
+  aspect-ratio: 1 / 1;
 }
 
 /* Projects SECTION */

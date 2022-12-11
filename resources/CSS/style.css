@@ -1,11 +1,11 @@
 /* GLOBAL STYLING */
 html * {
   font-family: "Nunito", sans-serif;
-  font-size: 1.125rem;
   box-sizing: border-box;
 }
 body {
   background-color: aliceblue;
+  font-size: 1.125rem;
 }
 h2 {
   font-size: 2rem;
