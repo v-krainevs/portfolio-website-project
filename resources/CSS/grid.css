@@ -11,20 +11,20 @@ h3 {
 /* HEADER */
 header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: space-between;
+  grid-template-columns: auto auto;
   align-items: center;
 }
 #logo {
   justify-self: start;
 }
 nav {
-  justify-self: end;
   display: flex;
-  justify-content: space-around;
+  justify-self: end;
+  
 }
+
 nav > a {
-  margin-left: 2em;
+  margin-left: 1.5em;
 }
 
 /* MAIN */
