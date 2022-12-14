@@ -2,6 +2,8 @@
 
 section {
   margin: 2em 0;
+  max-width: 90vw;
+  min-width: min-content;
 }
 h3 {
   font-size: 1.125em;
@@ -20,7 +22,6 @@ header {
 nav {
   display: flex;
   justify-self: end;
-  
 }
 
 nav > a {
@@ -37,11 +38,9 @@ main {
 .abt {
   display: grid;
   grid-template-columns: repeat(2, minmax(250px, 400px));
-  max-width: 90vw;
-  min-width: min-content;
-  gap: 1em;
   justify-items: center;
   align-content: center;
+  gap: 1em;
 }
 .heading {
   grid-column: span 2;
@@ -58,18 +57,25 @@ main {
 }
 
 /* Projects SECTION */
-.projects_interactive_panel {
+.projects_section {
   display: grid;
-  grid-template-columns: 40px 1000px 40px;
+  grid-template-columns: min-content min(1000px, 90%) min-content;
+  overflow: hidden;
   align-items: center;
+  gap: 1em;
   justify-content: center;
+}
+#projects_heading {
+  grid-column: span 3;
+  justify-self: center;
 }
 .hide_sausage {
   overflow: hidden;
 }
 .sausage {
-  display: grid;
-  grid-template: 1fr / repeat(4, 100%);
+  display: inline-grid;
+  grid-template-columns: repeat(4, 100%);
+  overflow: hidden;
 }
 .arrow {
   display: inline-block;
@@ -77,9 +83,9 @@ main {
   height: 0px;
   box-sizing: border-box;
   cursor: pointer;
-  z-index: 5;
   border-top: 40px solid transparent;
   border-bottom: 40px solid transparent;
+  z-index: 5;
 }
 .arrow_left {
   border-right: 40px solid black;
@@ -89,21 +95,17 @@ main {
 }
 .project_card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-}
-.description {
-  padding: 2em;
+  grid-template-columns: repeat(2, minmax(260px, 450px));
+  gap: 1em;
+  justify-content: center;
 }
 .crop_project_thumbnail {
-  display: flex;
-  justify-content: center;
   overflow: hidden;
   border-radius: 2em;
   max-height: 300px;
-  max-width: 450px;
+  aspect-ratio: 3 / 2;
 }
 .project_thumbnail {
-  height: 100%;
+  max-height: 100%;
 }
 /* Cheatsheet Project */
