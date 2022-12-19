@@ -23,7 +23,7 @@ a:hover {
 /* INDIVIDUAL ELEMENTS STYLING */
 /* HEADER */
 header {
-  height: 4em;
+  min-height: 4em;
   padding: 0 0.75em;
   background-color: aliceblue;
   border-bottom: 0.5px solid;
