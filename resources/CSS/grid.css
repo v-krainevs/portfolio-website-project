@@ -64,23 +64,21 @@ main {
   flex-direction: column;
   align-items: center;
 }
-.hide_section {
-  overflow: hidden;
-}
-.hide_section .sausage {
-  display: grid;
-  grid-template-columns: repeat(4, 100%);
-  justify-items: center;
+
+.sausage {
+  display: flex;
+  /* overflow: hidden; */
+  /* width: min(100%, 920px); */
+  width: clamp(250px, 100%, 920px);
 }
 .sausage .project_card {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 450px));
-  align-items: flex-start;
-  overflow: hidden;
-  width: min(900px, 100%);
-  gap: 1em;
+  display: flex;
+  gap: max(0.5em, 1vw);
+  width: max(250px, 100%);
 }
-
+.project_card > * {
+  flex: 1;
+}
 .project_card .crop_project_thumbnail {
   display: flex;
   justify-content: center;
@@ -116,7 +114,7 @@ main {
 /* Cheatsheet Project */
 
 /* MEDIA QUERIES */
- @media all and (max-width: 535px) {
+@media all and (max-width: 580px) {
   .about .biography_card {
     flex-direction: column;
   }
@@ -127,5 +125,15 @@ main {
     aspect-ratio: auto;
     padding: min(5vw, 0.5em);
   }
-
-} 
+  .sausage .project_card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project_card > * {
+    flex: auto;
+    width: 100%;
+  }
+  .project_card .description {
+    padding: min(5vw, 0.5em);
+  }
+}
