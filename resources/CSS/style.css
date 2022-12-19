@@ -43,5 +43,5 @@ header {
 .sausage {
   transition: 400ms;
   position: relative;
-  right: 0px;
+  right: 0;
 }

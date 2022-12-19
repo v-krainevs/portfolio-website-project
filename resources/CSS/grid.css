@@ -64,17 +64,19 @@ main {
   flex-direction: column;
   align-items: center;
 }
-
+.hide_sausage {
+  width: clamp(250px, 100%, 920px);
+  overflow: hidden;
+}
 .sausage {
   display: flex;
-  /* overflow: hidden; */
-  /* width: min(100%, 920px); */
-  width: clamp(250px, 100%, 920px);
+  width: 100%;
 }
 .sausage .project_card {
   display: flex;
   gap: max(0.5em, 1vw);
-  width: max(250px, 100%);
+  /* width: max(250px, 100%); */
+  min-width: 100%;
 }
 .project_card > * {
   flex: 1;
