@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap");
 
-body {
-  display: grid;
-}
 section {
-  margin: 2em 0;
+  margin: min(5vw, 2em) 2.5vw 0;
+  gap: max(1vw, 0.5em);
 }
 h3 {
   font-size: 1.125em;
@@ -14,107 +12,145 @@ h3 {
 /* HEADER */
 header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: space-between;
+  grid-template-columns: auto auto;
   align-items: center;
 }
 #logo {
   justify-self: start;
 }
-nav {
+header nav {
+  display: flex;
   justify-self: end;
+  flex-wrap: wrap;
 }
-nav > a {
-  margin-left: 2em;
+
+header nav > a {
+  margin-left: 1.5em;
+  min-width: max-content;
 }
 
 /* MAIN */
 main {
-  max-width: 1000px;
-  justify-self: center;
+  display: flex;
+  flex-direction: column;
 }
 /* About me SECTION*/
-.abt {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "heading heading"
-    "image description";
-  justify-content: space-around;
-  justify-items: center;
-  overflow: hidden;
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.heading {
-  grid-area: heading;
-  justify-self: start;
-  margin-bottom: 1em;
+.about .biography_card {
+  display: flex;
+  gap: max(0.5em, 1vw);
 }
-
-.crop {
-  height: 300px;
+.biography_card > * {
+  aspect-ratio: 1 / 1;
+  width: clamp(250px, 45vw, 450px);
+}
+.biography_card .crop {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  border-radius: 3em 3em 9em 9em;
-  max-width: 300px;
-}
-
-#anonymous_img {
-  max-height: 100%;
+  border-radius: 2em;
 }
 
 /* Projects SECTION */
-.projects_interactive_panel {
-  display: grid;
-  grid-template-columns: 40px 1000px 40px;
+.projects {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .hide_sausage {
+  width: clamp(250px, 100%, 920px);
   overflow: hidden;
-  width: 1000px;
 }
 .sausage {
-  display: grid;
-  grid-template: 1fr / repeat(4, 100%);
+  display: flex;
+  width: 100%;
+}
+.sausage .project_card {
+  display: flex;
+  gap: max(0.5em, 1vw);
+  /* width: max(250px, 100%); */
+  min-width: 100%;
+}
+.project_card > * {
+  flex: 1;
+}
+.project_card .crop_project_thumbnail {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 2em;
+  aspect-ratio: 3 / 2;
+}
+.crop_project_thumbnail .project_thumbnail {
+  max-height: 100%;
+}
+.projects .arrows {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5em;
 }
 .arrow {
-  color: rebeccapurple;
   display: inline-block;
   width: 0px;
   height: 0px;
   box-sizing: border-box;
   cursor: pointer;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
   z-index: 5;
 }
 .arrow_left {
-  border-right: 40px solid red;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
+  border-right: 40px solid black;
 }
 .arrow_right {
-  border-left: 40px solid red;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
+  border-left: 40px solid black;
 }
-.project_card {
+
+/* Skills Section */
+.skills.section {
+  margin-bottom: 200px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  height: 300px;
-}
-.description {
-  padding: 2em;
-}
-.crop_project_thumbnail {
-  display: flex;
   justify-content: center;
-  overflow: hidden;
-  border-radius: 2em;
-  height: 300px;
-  width: 450px;
+  justify-items: center;
 }
-.project_thumbnail {
-  height: 100%;
+
+.skills_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-/* Cheatsheet Project */
+.skills_wrapper > * {
+  /* max-height: 225px; */
+  height: clamp(170px, 40vw, 225px);
+  margin-bottom: clamp(10px, 2.5vw, 1em);
+}
+/* MEDIA QUERIES */
+@media all and (max-width: 580px) {
+  .about .biography_card {
+    flex-direction: column;
+  }
+  .biography_card > * {
+    width: clamp(250px, 85vw, 450px);
+  }
+  .biography_card p {
+    aspect-ratio: auto;
+    padding: min(5vw, 0.5em);
+  }
+  .sausage .project_card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project_card > * {
+    flex: auto;
+    width: 100%;
+  }
+  .project_card .description {
+    padding: min(5vw, 0.5em);
+  }
+}

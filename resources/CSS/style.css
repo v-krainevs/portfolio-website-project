@@ -1,11 +1,11 @@
 /* GLOBAL STYLING */
 html * {
   font-family: "Nunito", sans-serif;
-  font-size: 1.125rem;
   box-sizing: border-box;
 }
 body {
   background-color: aliceblue;
+  font-size: 1.125rem;
 }
 h2 {
   font-size: 2rem;
@@ -23,7 +23,7 @@ a:hover {
 /* INDIVIDUAL ELEMENTS STYLING */
 /* HEADER */
 header {
-  height: 4em;
+  min-height: 4em;
   padding: 0 0.75em;
   background-color: aliceblue;
   border-bottom: 0.5px solid;
@@ -43,5 +43,5 @@ header {
 .sausage {
   transition: 400ms;
   position: relative;
-  right: 0px;
+  right: 0;
 }
