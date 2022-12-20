@@ -40,9 +40,6 @@ main {
   flex-direction: column;
   align-items: center;
 }
-.heading {
-  grid-column: span 2;
-}
 .about .biography_card {
   display: flex;
   gap: max(0.5em, 1vw);
@@ -113,8 +110,25 @@ main {
 .arrow_right {
   border-left: 40px solid black;
 }
-/* Cheatsheet Project */
 
+/* Skills Section */
+.skills.section {
+  margin-bottom: 200px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.skills_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.skills_wrapper > * {
+  /* max-height: 225px; */
+  height: clamp(170px, 40vw, 225px);
+  margin-bottom: clamp(10px, 2.5vw, 1em);
+}
 /* MEDIA QUERIES */
 @media all and (max-width: 580px) {
   .about .biography_card {
