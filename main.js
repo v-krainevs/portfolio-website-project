@@ -1,6 +1,8 @@
 const sausage = document.getElementById("sausage");
 const rightArrow = document.getElementById("right_arrow");
 const leftArrow = document.getElementById("left_arrow");
+const burgerIcon = document.getElementById("burger");
+const navMenu = document.getElementById("navMenu");
 
 let distance = 0;
 
@@ -41,3 +43,16 @@ leftArrow.addEventListener("click", changeOpacity);
 leftArrow.addEventListener("click", reduceDistance);
 rightArrow.addEventListener("click", changeOpacity);
 rightArrow.addEventListener("click", increaseDistance);
+
+function openMenu() {
+  navMenu.classList.toggle("open");
+  burgerIcon.classList.toggle("active");
+}
+
+burgerIcon.addEventListener("click", openMenu);
+document.querySelectorAll(".nav-link").forEach((element) => {
+  element.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+    burgerIcon.classList.remove("active");
+  });
+});

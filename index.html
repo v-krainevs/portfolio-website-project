@@ -15,21 +15,21 @@
 <body>
     <header>
         <h2 id="logo">Krainev</h2>
-        <nav>
-            <a href="#">About Me</a>
-            <a href="#">Projects</a>
-            <a href="#">Skills</a>
-            <a href="#">Contact</a>
+        <nav id="navMenu">
+            <a class="nav-link" href="#about">About Me</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#">Contact</a>
         </nav>
-        <div class="menu_wrapper">
-            <div class="menu"></div>
-            <div class="menu"></div>
-            <div class="menu"></div>
+        <div id="burger" class="burger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
     </header>
     <main>
         <!-- About me section -->
-        <section class="about section">
+        <section id="about" class="about section">
             <h2 class="heading">About me</h2>
             <div class="biography_card">
                 <div class="crop">
@@ -42,7 +42,7 @@
             </div>
         </section>
         <!-- Projects section -->
-        <section class="projects">
+        <section id="projects" class="projects">
             <h2 id="projects_heading">Projects</h2>
             <div class="hide_sausage">
                 <div id="sausage" class="sausage">
@@ -127,7 +127,7 @@
             </div>
         </section>
         <!-- Skills Section -->
-        <section class="section skills">
+        <section id="skills" class="section skills">
             <h2 class="heading">Skills</h2>
             <div class="skills_wrapper">
                 <img src="resources/Images/Skills_Section/html.png" alt="">
