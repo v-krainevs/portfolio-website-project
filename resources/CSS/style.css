@@ -45,3 +45,10 @@ header {
   position: relative;
   right: 0;
 }
+.description a {
+  color: rgb(214, 102, 102);
+}
+
+.description a:hover{
+  text-decoration: underline;
+}

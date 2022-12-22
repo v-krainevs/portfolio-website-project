@@ -79,6 +79,10 @@ main {
   /* width: max(250px, 100%); */
   min-width: 100%;
 }
+.description a {
+  display: block;
+  margin-top: 1em;
+}
 .project_card > * {
   flex: 1;
 }
@@ -159,6 +163,9 @@ main {
 }
 
 @media all and (max-width: 515px) {
+  .sausage {
+    align-items: flex-start;
+  }
   header nav {
     display: grid;
     position: fixed;
